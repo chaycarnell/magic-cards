@@ -14,7 +14,7 @@ test("Card sorting function sorts cards by house and rank correctly", () => {
     { title: "J", rank: 9, suit: "Diamonds" }
   ];
   // Set the suit order
-  const order = ["Clubs", "Spades", "Hearts", "Diamonds"];
+  const order = cardPack.Suits;
   // Call the state function sortCards
   const outputCards = sortCards(initialCards, order);
   // Observe the expected output
