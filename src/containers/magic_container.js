@@ -21,13 +21,12 @@ export default class MagicCards extends Component {
       cardSuits: cardPack.Suits,
       cards: cardPack.Cards,
       cardDeck: [],
-      drawnCards: [],
-      suitOrder: ["Clubs", "Spades", "Hearts", "Diamonds"]
+      drawnCards: []
     };
   }
 
   sortDrawnCards() {
-    this.setState(sortCards(this.state.drawnCards, this.state.suitOrder));
+    this.setState(sortCards(this.state.drawnCards, this.state.cardSuits));
   }
 
   drawCard() {
