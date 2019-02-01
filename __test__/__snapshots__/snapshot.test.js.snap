@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders one card correctly 1`] = `
+<div
+  className="card-container"
+>
+  <div
+    className="card-title"
+  >
+    2
+  </div>
+  <div
+    className="graphic-container"
+  >
+    <div
+      className="card-graphic Clubs"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders the card table correctly with 1 card 1`] = `
+<div
+  className="card-table"
+>
+  <h2
+    className="title"
+  >
+    Card Table
+  </h2>
+  <div
+    className="card-container"
+  >
+    <div
+      className="card-title"
+    >
+      2
+    </div>
+    <div
+      className="graphic-container"
+    >
+      <div
+        className="card-graphic Clubs"
+      />
+    </div>
+  </div>
+</div>
+`;
