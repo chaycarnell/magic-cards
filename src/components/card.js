@@ -1,5 +1,5 @@
 // Libs
-import React from "react";
+import React from 'react'
 
 // Card component, renders passed card object
 const CardTable = ({ card }) => {
@@ -7,10 +7,10 @@ const CardTable = ({ card }) => {
     <div className="card-container">
       <div className="card-title">{card.title}</div>
       <div className="graphic-container">
-        <div className={"card-graphic " + card.suit} />
+        <div className={'card-graphic ' + card.suit} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CardTable;
+export default CardTable

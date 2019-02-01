@@ -1,5 +1,5 @@
 // Libs
-import React from "react";
+import React from 'react'
 
 // Card component, renders passed card object
 const Button = ({ action, text }) => {
@@ -7,7 +7,7 @@ const Button = ({ action, text }) => {
     <button type="button" className="big-button" onClick={() => action()}>
       {text}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

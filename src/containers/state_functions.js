@@ -6,18 +6,18 @@
  */
 export function sortCards(cards, order) {
   // Avoid a direct state mutation, create new array
-  const drawnCards = [...cards];
+  const drawnCards = [...cards]
   // map for efficient lookup of sortIndex
-  let ordering = {};
+  let ordering = {}
   // Assign the desired sorting order of Suit
   for (let i = 0; i < order.length; i++) {
-    ordering[order[i]] = i;
+    ordering[order[i]] = i
   }
   // Create an array of sorted cards
   drawnCards.sort((a, b) => {
-    return ordering[a.suit] - ordering[b.suit] || a.rank - b.rank;
-  });
-  return { drawnCards };
+    return ordering[a.suit] - ordering[b.suit] || a.rank - b.rank
+  })
+  return { drawnCards }
 }
 
 /**
@@ -28,15 +28,15 @@ export function sortCards(cards, order) {
  */
 export function drawCard(deckedCards, drawnCards) {
   // Avoid a direct state mutation, create new array
-  const cardDeck = [...deckedCards];
+  const cardDeck = [...deckedCards]
   // Grab a card from the top of the cardDeck array
-  const card = cardDeck[0];
+  const card = cardDeck[0]
   // Update the state of cardDeck, filtering out the index of the card drawn
   // Use a spread to merge the drawnCards state and the card drawn
   return {
     cardDeck: cardDeck.filter((_, i) => i !== 0),
     drawnCards: [...drawnCards, ...[card]]
-  };
+  }
 }
 
 /**
@@ -46,21 +46,21 @@ export function drawCard(deckedCards, drawnCards) {
  */
 export function shuffleCardDeck(deckedCards) {
   // Avoid a direct state mutation, create new array
-  const cardDeck = [...deckedCards];
+  const cardDeck = [...deckedCards]
   // switch the values of two random cards 200 times
   for (let i = 0; i < 200; i++) {
     // Select two cards from the cardDeck array at random
-    let firstCard = Math.floor(Math.random() * cardDeck.length);
-    let secondCard = Math.floor(Math.random() * cardDeck.length);
+    let firstCard = Math.floor(Math.random() * cardDeck.length)
+    let secondCard = Math.floor(Math.random() * cardDeck.length)
     // Hold the first card value temporarily
-    let firstCardValue = cardDeck[firstCard];
+    let firstCardValue = cardDeck[firstCard]
     // Swap the cards by switching the values at each cards index in the cardDeck array
-    cardDeck[firstCard] = cardDeck[secondCard];
+    cardDeck[firstCard] = cardDeck[secondCard]
     // Use the firstCardValue as the original index value has been swapped already
-    cardDeck[secondCard] = firstCardValue;
+    cardDeck[secondCard] = firstCardValue
   }
   // Update state
-  return { cardDeck };
+  return { cardDeck }
 }
 
 /**
@@ -71,12 +71,12 @@ export function shuffleCardDeck(deckedCards) {
  */
 export function createCardDeck(cardSuits, cards) {
   // Create an initial array to hold the card deck
-  const cardDeck = [];
+  const cardDeck = []
   cardSuits.forEach(suit => {
     cards.forEach(card => {
-      cardDeck.push({ title: card.title, rank: card.rank, suit });
-    });
-  });
+      cardDeck.push({ title: card.title, rank: card.rank, suit })
+    })
+  })
   // Return new deck, clear any previously drawn cards
-  return { cardDeck, drawnCards: [] };
+  return { cardDeck, drawnCards: [] }
 }
