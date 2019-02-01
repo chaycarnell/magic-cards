@@ -1,7 +1,7 @@
 module.exports = {
   parser: "babel-eslint",
-  plugins: ["react"],
-  extends: "eslint:recommended",
+  plugins: ["react", "prettier"],
+  extends: ["eslint:recommended", "prettier"],
   rules: {
     quotes: [2, "single"],
     "react/jsx-uses-react": 1,
