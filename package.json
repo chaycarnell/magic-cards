@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "test": "jest",
     "prettier": "pretty-quick --staged",
-    "prettier:all": "prettier --write '**/*.js'",
+    "prettier:all": "prettier --write **/*.js",
     "lint": "eslint ./src --fix"
   },
   "repository": {
@@ -18,8 +18,11 @@
   "author": "chaycarnell@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "install": "^0.12.2",
+    "npm": "^6.8.0",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

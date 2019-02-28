@@ -1,5 +1,6 @@
 // Libraries
 import React, { Component } from 'react'
+import styled from 'styled-components'
 // Components
 import CardTable from '../components/card_table'
 import Button from '../components/button'
@@ -8,6 +9,32 @@ import { sortCards, drawCard, shuffleCardDeck, createCardDeck } from './state_fu
 // Cards
 import cardPack from '../data/cards'
 
+const Container = styled.div`
+  padding-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+const ButtonContainer = styled.div`
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`
+const Heading = styled.h1`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+const DescriptiveText = styled.div`
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+  margin: 5px;
+`
 export default class MagicCards extends Component {
   constructor(props) {
     super(props)
@@ -42,21 +69,21 @@ export default class MagicCards extends Component {
     const drawnCards = this.state.drawnCards.length > 0
     const showCards = deckedCards || drawnCards
     return (
-      <div className="container">
-        <h1 className="title">Chays Magic Cards</h1>
+      <Container>
+        <Heading>Chays Magic Cards</Heading>
         {showCards ? (
           <CardTable drawnCards={this.state.drawnCards} />
         ) : (
-          <div className="desc-text">Card tricks with no cards? Create a deck!</div>
+          <DescriptiveText>Card tricks with no cards? Create a deck!</DescriptiveText>
         )}
-        {deckedCards ? <div className="desc-text">{this.state.cardDeck.length} cards left</div> : null}
-        <div className="button-container">
+        {deckedCards ? <DescriptiveText>{this.state.cardDeck.length} cards left</DescriptiveText> : null}
+        <ButtonContainer>
           {deckedCards ? <Button action={() => this.drawCard()} text="Draw Card" /> : null}
           {showCards ? <Button action={() => this.sortDrawnCards()} text="Sort Cards" /> : null}
           {deckedCards ? <Button action={() => this.shuffleCardDeck()} text="Shuffle Deck" /> : null}
           <Button action={() => this.createCardDeck()} text="New Deck" />
-        </div>
-      </div>
+        </ButtonContainer>
+      </Container>
     )
   }
 }
