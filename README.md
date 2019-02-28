@@ -4,6 +4,8 @@ A simple card deck creator built with React, with functionality to shuffle and d
 
 Available on heroku: https://chays-magic-cards.herokuapp.com/
 
+Now using styled-components
+
 ### Getting Started
 
 To get started:
