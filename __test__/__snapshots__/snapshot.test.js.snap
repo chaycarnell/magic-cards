@@ -2,18 +2,19 @@
 
 exports[`renders one card correctly 1`] = `
 <div
-  className="card-container"
+  className="sc-bdVaJa hVKLoi"
 >
   <div
-    className="card-title"
+    className="sc-bwzfXH kcAiZW"
   >
     2
   </div>
   <div
-    className="graphic-container"
+    className="sc-htpNat fvkhKw"
   >
     <div
-      className="card-graphic Clubs"
+      className="sc-bxivhb hhpgyT"
+      type="Clubs"
     />
   </div>
 </div>
@@ -21,26 +22,27 @@ exports[`renders one card correctly 1`] = `
 
 exports[`renders the card table correctly with 1 card 1`] = `
 <div
-  className="card-table"
+  className="sc-ifAKCX eFpWkd"
 >
   <h2
-    className="title"
+    className="sc-bZQynM GbkAN"
   >
     Card Table
   </h2>
   <div
-    className="card-container"
+    className="sc-bdVaJa hVKLoi"
   >
     <div
-      className="card-title"
+      className="sc-bwzfXH kcAiZW"
     >
       2
     </div>
     <div
-      className="graphic-container"
+      className="sc-htpNat fvkhKw"
     >
       <div
-        className="card-graphic Clubs"
+        className="sc-bxivhb hhpgyT"
+        type="Clubs"
       />
     </div>
   </div>

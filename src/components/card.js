@@ -17,6 +17,8 @@ const CardTitle = styled.div`
   margin: 4px 0 0 8px;
   font-size: 1.3rem;
 `
+// Workaround for render testing to find the node
+CardTitle.displayName = 'CardTitle'
 
 const GraphicBox = styled.div`
   height: inherit;
