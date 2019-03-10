@@ -1,7 +1,7 @@
 {
   "name": "magic-cards",
   "version": "1.0.0",
-  "description": "A simple card deck creator with basic functionality",
+  "description": "A simple card deck app with basic functionality",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
