@@ -2,7 +2,7 @@
 
 A simple card deck creator built with React
 
-Available on heroku: https://chays-magic-cards.herokuapp.com/
+Available on heroku: https://ibm-code-test.herokuapp.com/
 
 ### Getting Started
 
